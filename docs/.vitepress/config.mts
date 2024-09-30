@@ -1,3 +1,4 @@
+import { SearchPlugin } from "vitepress-plugin-search";
 import { defineConfig } from 'vitepress'
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar'
 
@@ -14,6 +15,10 @@ export default defineConfig({
       AutoSidebar({
         // You can also set options to adjust sidebar data
         // see option document below
+      }),
+      SearchPlugin({
+        encode: false,
+        tokenize: 'full'
       }),
     ],
   },
