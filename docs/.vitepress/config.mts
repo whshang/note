@@ -5,7 +5,7 @@ import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/', //网站部署的路径，默认根目录
+  base: '/note/', //网站部署的路径，默认根目录
   title: "Building a Second Brain",
   description: "A VitePress Site",
   vite: {
