@@ -6,9 +6,7 @@
   },
   "dependencies": {
     "package.json": "^2.0.1",
-    "pagefind": "^1.1.1",
-    "vite-plugin-vitepress-auto-sidebar": "^1.7.0",
-    "vitepress-plugin-pagefind": "^0.4.10"
+    "vite-plugin-vitepress-auto-sidebar": "^1.7.0"
   },
   "devDependencies": {
     "@mdit-vue/shared": "^2.1.3",
