@@ -18,7 +18,7 @@ export default defineConfig({
       }),
       SearchPlugin({
         encode: false,
-        tokenize: 'full'
+        tokenize: 'forward'
       }),
     ],
   },
