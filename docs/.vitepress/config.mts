@@ -1,12 +1,12 @@
 import { defineConfig } from 'vitepress'
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar'
-// import AutoNav from "vite-plugin-vitepress-auto-nav";
-
+import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Building a Second Brain",
   description: "A VitePress Site",
+  lang: 'zh-cn',
   vite: {
     plugins: [
       // AutoNav({
@@ -15,6 +15,10 @@ export default defineConfig({
       AutoSidebar({
         // You can also set options to adjust sidebar data
         // see option document below
+      }),
+      pagefindPlugin({
+        customSearchQuery: chineseSearchOptimize,
+        excludeSelector: ['img', 'a.header-anchor']
       }),
     ],
   },
