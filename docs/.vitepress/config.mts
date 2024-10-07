@@ -1,4 +1,4 @@
-import { SearchPlugin } from "vitepress-plugin-search";
+import { SearchPlugin } from 'vitepress-plugin-search'
 import { defineConfig } from 'vitepress'
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar'
 
