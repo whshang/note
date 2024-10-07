@@ -5,6 +5,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
+    "@elog/plugin-img-r2": "^0.1.1",
     "flexsearch": "^0.7.43",
     "package.json": "^2.0.1",
     "vite-plugin-vitepress-auto-sidebar": "^1.7.0",
