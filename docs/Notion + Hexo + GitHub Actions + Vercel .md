@@ -11,24 +11,18 @@
 
 # 博客搭建指南
 
-
 ## 1. Fork模板仓库
-
 
 [点击 Fork](https://github.com/elog-x/notion-hexo/fork) 该模板仓库到个人 Github 账号仓库下并 clone 到本地
 
 
 ## 2. 安装依赖
 
-
 在项目根目录下运行命令安装依赖
-
 
 ```shell
 npm install
 ```
-
-
 ## 3. 新建 Elog 本地调试文件
 
 
