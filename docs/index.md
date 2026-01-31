@@ -1,32 +1,25 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: "AI-Powered Knowledge"
-  text: "Augmenting Intelligence, Documenting Learning"
+  name: "Digital Garden"
+  text: "AI-Powered Knowledge Management"
   tagline: "Learn · Build · Share"
   actions:
     - theme: brand
-      text: Notes
-      link: /Note/
+      text: Get Started
+      link: /guide/
     - theme: alt
-      text: Reading
-      link: /Book/
-    - theme: alt
-      text: Collections
-      link: /Collections/
-    - theme: alt
-      text: Python 50
-      link: /Python-Core-50-Courses/
+      text: View on GitHub
+      link: https://github.com/whshang/note
 
 features:
   - icon: 🤖
     title: AI-Augmented Learning
-    details: Leveraging AI tools to accelerate understanding, generate insights, and enhance knowledge retention
+    details: Leverage AI to enhance knowledge management and accelerate your learning journey.
   - icon: 🧠
     title: Digital Brain Building
-    details: Creating a systematic second brain with AI assistance for continuous iteration and retrieval
+    details: Organize your thoughts, create connections, and build a second brain that grows with you.
   - icon: ⚡
     title: Rapid Knowledge Capture
-    details: Using AI to transform scattered thoughts into structured, actionable knowledge in real-time
+    details: Capture ideas instantly, search efficiently, and retrieve information in milliseconds.

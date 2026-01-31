@@ -1,18 +1,32 @@
 import { defineConfig } from 'vitepress'
 import { withSidebar } from 'vitepress-sidebar'
 
-// 使用 VitePress 内置 minisearch（最稳定、最快）
-// 不需要任何第三方搜索插件
+// https://vitepress.dev/reference/site-config
 export default withSidebar(
   defineConfig({
     title: "Digital Garden",
-    description: "A personal knowledge base and digital garden",
+    description: "A personal knowledge base and digital garden powered by AI",
     lang: 'zh-cn',
+
+    // SEO 优化
+    head: [
+      ['meta', { name: 'author', content: 'whshang' }],
+      ['meta', { name: 'keywords', content: 'digital garden, knowledge base, AI, learning, notes' }],
+      ['meta', { property: 'og:type', content: 'website' }],
+      ['meta', { property: 'og:locale', content: 'zh-CN' }],
+      ['meta', { property: 'og:site_name', content: 'Digital Garden' }],
+      ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+      ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
+    ],
+
     themeConfig: {
       nav: [
         { text: 'Home', link: '/' },
         { text: 'Nav', link: '/nav' }
       ],
+
+      // 侧边栏由 vitepress-sidebar 自动生成
+
       // VitePress 内置搜索配置
       search: {
         provider: 'local',
@@ -46,11 +60,88 @@ export default withSidebar(
           }
         }
       },
+
+      // 外部链接
+      socialLinks: [
+        { icon: 'github', link: 'https://github.com/whshang/note' }
+      ],
+
+      // 页脚
+      footer: {
+        message: 'Built with <3',
+        copyright: 'Copyright © 2026 whshang'
+      },
+
+      // 编辑链接（在 GitHub 上编辑）
+      editLink: {
+        pattern: 'https://github.com/whshang/note/edit/main/docs/:path'
+      },
+
+      // 最后更新时间
+      lastUpdated: {
+        text: '最后更新于',
+        formatOptions: {
+          dateStyle: 'full',
+          timeStyle: 'medium'
+        }
+      },
+
+      // 返回顶部
+      outline: {
+        level: [2, 3],
+        label: '页面导航'
+      }
     },
+
+    // Markdown 配置
     markdown: {
       image: {
         lazyLoading: true,
       },
+      // 代码块配置
+      codeTransformers: [
+        {
+          pre: (code) => {
+            // 可以添加自定义代码处理
+            return code
+          }
+        }
+      ],
+      // 行号
+      lineNumbers: true
     },
+
+    // 构建优化
+    build: {
+      // 代码分割
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vue-vendor': ['vue', 'vue-router'],
+            'vitepress-vendor': ['vitepress']
+          }
+        }
+      },
+      // chunk 大小警告限制
+      chunkSizeWarningLimit: 1000
+    },
+
+    // 性能优化
+    vite: {
+      // CSS 代码分割
+      css: {
+        devSourcemap: true,
+        preprocessorOptions: {
+          scss: {
+            // Sass 全局变量
+            additionalData: `@use "@theme/styles/variables.scss" as *;`
+          }
+        }
+      },
+      // 优化预构建
+      optimizeDeps: {
+        include: ['vue', 'vitepress', 'vitepress-sidebar']
+      }
+    }
   })
 )
