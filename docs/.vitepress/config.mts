@@ -22,10 +22,16 @@ export default withSidebar(
     themeConfig: {
       nav: [
         { text: 'Home', link: '/' },
+        { text: 'Tools', link: '/工具评测/' },
+        { text: 'Methods', link: '/方法技巧/' },
+        { text: 'Career', link: '/职业发展/' },
+        { text: 'Org', link: '/组织协同/' },
+        { text: 'Thinking', link: '/深度思考/' },
+        { text: 'Practice', link: '/实战记录/' },
         { text: 'Nav', link: '/nav' }
       ],
 
-      // 侧边栏由 vitepress-sidebar 自动生成
+      sidebar: {} // 侧边栏由 vitepress-sidebar 自动生成
 
       // VitePress 内置搜索配置
       search: {
