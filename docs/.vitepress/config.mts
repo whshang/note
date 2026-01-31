@@ -4,17 +4,17 @@ import { withSidebar } from 'vitepress-sidebar'
 // https://vitepress.dev/reference/site-config
 export default withSidebar(
   defineConfig({
-    title: "Digital Garden",
-    description: "A personal knowledge base and digital garden powered by AI",
+    title: "AI Knowledge Lab",
+    description: "Tools · Methods · Thinking",
     lang: 'zh-cn',
 
     // SEO 优化
     head: [
       ['meta', { name: 'author', content: 'whshang' }],
-      ['meta', { name: 'keywords', content: 'digital garden, knowledge base, AI, learning, notes' }],
+      ['meta', { name: 'keywords', content: 'AI, knowledge base, tools, methods, career, thinking, practice' }],
       ['meta', { property: 'og:type', content: 'website' }],
       ['meta', { property: 'og:locale', content: 'zh-CN' }],
-      ['meta', { property: 'og:site_name', content: 'Digital Garden' }],
+      ['meta', { property: 'og:site_name', content: 'AI Knowledge Lab' }],
       ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
       ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
     ],
@@ -30,8 +30,6 @@ export default withSidebar(
         { text: 'Practice', link: '/实战记录/' },
         { text: 'Nav', link: '/nav' }
       ],
-
-      sidebar: {} // 侧边栏由 vitepress-sidebar 自动生成
 
       // VitePress 内置搜索配置
       search: {
@@ -102,51 +100,7 @@ export default withSidebar(
     // Markdown 配置
     markdown: {
       image: {
-        lazyLoading: true,
-      },
-      // 代码块配置
-      codeTransformers: [
-        {
-          pre: (code) => {
-            // 可以添加自定义代码处理
-            return code
-          }
-        }
-      ],
-      // 行号
-      lineNumbers: true
-    },
-
-    // 构建优化
-    build: {
-      // 代码分割
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            'vue-vendor': ['vue', 'vue-router'],
-            'vitepress-vendor': ['vitepress']
-          }
-        }
-      },
-      // chunk 大小警告限制
-      chunkSizeWarningLimit: 1000
-    },
-
-    // 性能优化
-    vite: {
-      // CSS 代码分割
-      css: {
-        devSourcemap: true,
-        preprocessorOptions: {
-          scss: {
-            // Sass 全局变量
-            additionalData: `@use "@theme/styles/variables.scss" as *;`
-          }
-        }
-      },
-      // 优化预构建
-      optimizeDeps: {
-        include: ['vue', 'vitepress', 'vitepress-sidebar']
+        lazyLoading: true
       }
     }
   })
