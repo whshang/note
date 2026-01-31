@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "Digital Garden"
-  text: "Cultivating Thoughts in the Open"
-  tagline: "Grow · Learn · Share"
+  name: "AI-Powered Knowledge"
+  text: "Augmenting Intelligence, Documenting Learning"
+  tagline: "Learn · Build · Share"
   actions:
     - theme: brand
       text: Notes
@@ -21,14 +21,12 @@ hero:
       link: /Python-Core-50-Courses/
 
 features:
+  - icon: 🤖
+    title: AI-Augmented Learning
+    details: Leveraging AI tools to accelerate understanding, generate insights, and enhance knowledge retention
   - icon: 🧠
-    title: Knowledge Garden
-    details: Building a second brain with systematic thinking and continuous iteration
-  - icon: 🚀
-    title: Growth in Public
-    details: Recording learning, sharing insights, and growing openly in the digital age
-  - icon: 💡
-    title: Creative Flow
-    details: Capturing ideas, connecting dots, and fueling innovation through documentation
----
-
+    title: Digital Brain Building
+    details: Creating a systematic second brain with AI assistance for continuous iteration and retrieval
+  - icon: ⚡
+    title: Rapid Knowledge Capture
+    details: Using AI to transform scattered thoughts into structured, actionable knowledge in real-time
