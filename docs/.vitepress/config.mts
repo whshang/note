@@ -1,31 +1,19 @@
 import { defineConfig } from 'vitepress'
-import { OramaPlugin } from '@orama/plugin-vitepress'
 import { withSidebar } from 'vitepress-sidebar'
 
-// https://vitepress.dev/reference/site-config
+// 使用 VitePress 内置 minisearch（最稳定、最快）
+// 不需要任何第三方搜索插件
 export default withSidebar(
   defineConfig({
     title: "Digital Garden",
     description: "A personal knowledge base and digital garden",
     lang: 'zh-cn',
-    vite: {
-      plugins: [
-        // Orama RAG search - fastest search engine
-        OramaPlugin({
-          // Configure search options
-          searchOptions: {
-            threshold: 0.1,
-            limit: 10,
-          },
-        }),
-      ],
-    },
     themeConfig: {
       nav: [
         { text: 'Home', link: '/' },
         { text: 'Nav', link: '/nav' }
       ],
-      // Use VitePress built-in local search
+      // VitePress 内置搜索配置
       search: {
         provider: 'local',
         options: {
@@ -34,18 +22,17 @@ export default withSidebar(
               placeholder: '搜索文档',
               translations: {
                 button: {
-                  buttonText: '搜索文档',
+                  buttonText: '搜索',
                   buttonAriaLabel: '搜索文档'
                 },
                 modal: {
                   searchBox: {
-                    resetButtonTitle: '清除查询条件',
-                    resetButtonAriaLabel: '清除查询条件',
+                    resetButtonTitle: '清除查询',
+                    resetButtonAriaLabel: '清除查询',
                     clearButtonTitle: '清除',
                     clearButtonAriaLabel: '清除',
                     cancelButtonText: '取消',
-                    cancelButtonAriaLabel: '取消',
-                    searchButtonTitle: '搜索',
+                    cancelButtonAriaLabel: '取消'
                   },
                   noResultsText: '无法找到相关结果',
                   footer: {

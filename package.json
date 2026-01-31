@@ -5,8 +5,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "@elog/plugin-img-r2": "0.1.2-beta.0",
-    "@orama/plugin-vitepress": "^3.1.18"
+    "@elog/plugin-img-r2": "0.1.2-beta.0"
   },
   "devDependencies": {
     "@mdit-vue/shared": "^3.0.2",
