@@ -3,29 +3,32 @@
 layout: home
 
 hero:
-  name: "又一个"
-  text: "VitePress Site"
-  tagline: 我的头脑花园
+  name: "Digital Garden"
+  text: "Cultivating Thoughts in the Open"
+  tagline: "Grow · Learn · Share"
   actions:
     - theme: brand
-      text: 笔记
+      text: Notes
       link: /Note/
     - theme: alt
-      text: 读书
+      text: Reading
       link: /Book/
     - theme: alt
-      text: 采集
+      text: Collections
       link: /Collections/
     - theme: alt
-      text: Python 50讲
+      text: Python 50
       link: /Python-Core-50-Courses/
 
 features:
-  - title: 知识管理
-    details: 通过系统化的方法整理和组织信息，提高学习效率和知识应用能力
-  - title: 个人成长
-    details: 记录学习心得、反思和目标，促进持续的自我提升和能力发展
-  - title: 创意激发
-    details: 汇集灵感和想法，为创新项目和问题解决提供源源不断的创意支持
+  - icon: 🧠
+    title: Knowledge Garden
+    details: Building a second brain with systematic thinking and continuous iteration
+  - icon: 🚀
+    title: Growth in Public
+    details: Recording learning, sharing insights, and growing openly in the digital age
+  - icon: 💡
+    title: Creative Flow
+    details: Capturing ideas, connecting dots, and fueling innovation through documentation
 ---
 

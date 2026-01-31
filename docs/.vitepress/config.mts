@@ -1,17 +1,18 @@
 import { SearchPlugin } from 'vitepress-plugin-search'
 import { defineConfig } from 'vitepress'
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar'
+import { getGitTimestamp } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Building a Second Brain",
-  description: "A VitePress Site",
+  title: "Digital Garden",
+  description: "A personal knowledge base and digital garden",
   lang: 'zh-cn',
+  lastUpdated: {
+    timestamp: getGitTimestamp(),
+  },
   vite: {
     plugins: [
-      // AutoNav({
-      //   // 自定义配置
-      // }),
       AutoSidebar({
         // You can also set options to adjust sidebar data
         // see option document below
@@ -25,7 +26,13 @@ export default defineConfig({
   markdown: {
     image: {
       // 开启图片懒加载
-      lazyLoading: true
+      lazyLoading: true,
+    },
+    // 启用 CJK 友好支持
+    cjkFriendlyEmphasis: true,
+    // 启用缓存
+    cache: {
+      resetWhenChanged: true,
     },
   },
   themeConfig: {
