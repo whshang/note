@@ -1,7 +1,6 @@
 import { defineConfig } from 'vitepress'
-import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar'
+import { OramaPlugin } from '@orama/plugin-vitepress'
 
-// Test 1: Only sidebar plugin
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Digital Garden",
@@ -9,20 +8,24 @@ export default defineConfig({
   lang: 'zh-cn',
   vite: {
     plugins: [
-      AutoSidebar({
-        // Minimal config to test performance
+      OramaPlugin({
+        // Orama RAG search configuration
+        // Options: https://docs.orama.com/open-source/plugins/plugin-vitepress/
       }),
     ],
-  },
-  markdown: {
-    image: {
-      lazyLoading: true,
-    },
   },
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Nav', link: '/nav' }
     ],
+    search: {
+      provider: 'orama', // Use Orama for RAG-powered search
+    },
+  },
+  markdown: {
+    image: {
+      lazyLoading: true,
+    },
   },
 })
