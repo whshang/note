@@ -12,3 +12,5 @@ Welcome to my AI-focused knowledge base covering tools, methods, career developm
 - [Practical Records](./实战记录/)
 
 Built with VitePress.
+
+Last updated: 2026-02-01
